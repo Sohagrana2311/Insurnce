@@ -1,7 +1,11 @@
 body{
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid red;
 }
 .header{
+    background: url(/Images/bg\ \(1\).png) 100% -0% no-repeat;
     background-color: #0D4A31;
 }
 .nav{
@@ -12,11 +16,14 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.nav h1{
+    font-family: 'Inter', sans-serif;
+}
 .nav a{
-    font-weight: bold;
     margin-left: 20px;
     color: #fff;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 .nav a:hover{
     color:#F8C140 ;
@@ -28,6 +35,7 @@ body{
     background-color: #F8C140;
     border: none;
     border-radius: 5px;
+    font-family: 'Inter', sans-serif;
 }
 .btn-sign-in:hover{
     background-color: #fff;
@@ -35,22 +43,27 @@ body{
 }
 .banner-container{
     width: 90%;
-    margin: 10px auto;
+    margin: 0px auto;
     display: flex;
+   
 }
 .left-banner{
     color: #fff;
-    margin: 150px 100px 50px 0;
+    margin: 50px 100px 50px 0;
+}
+.left-banner h1{
+    font-size: 52px;
+    font-weight: bold;
 }
 .btn-get-start{
-    margin-top: 50px;
+    margin-top: 60px;
     padding: 10px 20px;
     background-color: #F8C140;
     border: none;
     border-radius: 5px;
 }
 .btn-video-start{
-    margin-top: 50px;
+    margin-top: 60px;
     padding: 10px 20px;
     background-color: #0D4A31;
     color: #fff;
@@ -68,25 +81,31 @@ body{
     transition: 1s;
 }
 .company-img-container{
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
 }
 
 .company-img{
+    
     background-color: #fff;
     margin-right: 10px;
     border-radius: 10px;
     padding: 5px;
+    transition: transform 1s;
 
+}
+.company-img:hover{
+    transform: scale(1.1);
 }
 
 
 
 
 .right-banner{
-    padding-left: 200px;
-    padding-right: 50px;
+    
+    padding-right: 100px;
     position: relative;
+    margin-top: 82px;
 }
 .right-banner img{
     margin-bottom: -5px;
@@ -109,7 +128,12 @@ body{
  
     margin-left: -50px;
 }
+.logo-img:hover{
+    transform: scale(1.2);
+
+}
 .qualified-certified{
+    font-size: 14px;
     margin-top: 100px;
     margin-left: -50px;
     background-color: #fff;
@@ -120,18 +144,23 @@ body{
     justify-content: space-around;
 }
 .insurance{
-    margin-left:300px ;
+    margin-left:320px ;
     background-color: #fff;
-    width: 150px;
+    width: 173px;
     padding: 5px;
     border-radius: 3px;
     position: relative;
+    font-size: 14px;
 }
 .insurance img{
     position: absolute;
     top: -20px;
     left: -20px;
 }
+
+
+
+
 /* Individual & Umbrella Policies */
 .policies-sec{
     width: 80%;
@@ -154,6 +183,10 @@ body{
 }
 .polici-info{
     border-radius: 5px;
+    transition: transform 1s;
+}
+.polici-info:hover{
+    transform: scale(1.05);
 }
 .polici-info-contant{
     margin: 10px 20px;
@@ -170,21 +203,138 @@ body{
     color: #fff;
     transition: 1s;
 }
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+    .nav a{
+        margin-left: 10px;
+    }
+    .banner-container{
+        width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+    .up-images{
+        position: absolute;
+        top: 0;
+        right: -4%;
+    }
+
+    
+    .policies-sec{
+        width: 80%;
+        margin: 100px auto;
+    }
+    .polici-infos{
+     display: block;
+     margin-bottom: 50px;
+     text-align: center; 
+    }
+    .polici-info2{
+        margin: 0px;
+        box-shadow: none;
+    }
+    .polici-info{
+        margin-top: 40px;
+    }
+ } */
+
+/* // Medium devices (tablets, 768px and up) */
+/* @media screen and (min-width: 768px) and (max-width: 992px) { 
+    .banner-container{
+        width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .right-banner{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .up-images{
+        position: absolute;
+        top: 0;
+        right: 10%;
+    }
+
+ } */
+
+
+/* // X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 992px) { 
+    .banner-container{
+        width: 90%;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
+    .left-banner{
+        margin: 50px 90px 50px 0px;
+    }
+    .left-banner h1{
+        font-size: 42px;
+    }
+    .company-img-container{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .right-banner{
+        margin-top: 105px;
+    }
+    .insurance{
+        margin-left:280px ;
+    }
+    .policies-sec{
+        width: 80%;
+        margin: 100px auto;
+    }
+    .polici-infos{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     margin-bottom: 50px;
+     text-align: left; 
+    }
+    .polici-info2{
+        margin: 0px;
+        box-shadow: none;
+    }
+    .polici-info{
+        margin-top: 40px;
+    }
+    
+ } */
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1536px) {  
+
+    body{
+        width: 1536px;
+        margin: 0 auto;
+    }
+ } */
 /* agent section */
 .agent{
     width: 80%;
     margin: 100px auto;
 }
 .agent-infos{
-    position: relative;
     margin-left: 150px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 1px;
 }
 .agent-info{
-    padding: 45px 60px;
+    text-align: center;
+   width: 200px;
+   height: 200px;
     background-color: #0D4A31;
+    color: #fff;
+    transition: transform .2s;
 }
 .agent-info1{
     border-radius: 15px 0 0 0;
@@ -196,13 +346,22 @@ body{
     border-radius: 0 0 0 15px;
 }
 .agent-info4{
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    padding: 55px 70px;
-    background-color: #fff;
     border-radius: 0 0 15px 0;
+}
+.agent-info:hover{ 
+    transform: scale(1.1);
+    text-align: center;
+    color: #4F4F4F;
+    background-color: #fff;
     box-shadow: 1px 1px 10px 10px rgba(18, 87, 59, 0.25);
+    
+}
+.agent-info4 h1{
+    font-size: 24px;
+}
+.agent-info4 p{
+ font-size: 14px;
+
 }
 
 /* <!-- guard section --> */
@@ -210,7 +369,7 @@ body{
     width: 80%;
     margin: 50px auto;
 }
-.guard img{
+.guard-img{
     margin-right: 150px;
 }
 .guard-contant{
@@ -229,7 +388,7 @@ body{
 .customer-reviews{
     position:absolute;
     top: 20%;
-    background:url(/Images/“.png) 85% 80% no-repeat;
+    background:url(/Images/“.png) 90% 25% no-repeat;
     background-size: 20%;
 }
 
@@ -242,7 +401,7 @@ body{
     
 }
 .customer-review p{
-    line-height: 30px;
+    line-height: 40px;
     margin-left: 30px;
 }
 
@@ -255,9 +414,18 @@ footer{
 .footer-header{
     color: #fff;
 }
+.footer-h-p h1{
+    font-size: 32px;
+    font-family: 400;
+}
+.footer-h-p p{
+    /* width: 80%; */
+    line-height: 30px;
+}
 .f-width{
     width: 80%;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
+    
 }
 
 .contact-box{
@@ -287,15 +455,19 @@ footer{
     display: block;
 }
 .input{
+    width: 300px;
     padding: 15px 20px;
     margin-bottom: 15px;
     border: .1px solid rgba(0, 0, 0, 0.19);
 }
+.message{
+    height: 150px;
+    
+}
 form{
     background-color: #fff;
-    padding: 80px 100px;
-    margin: 100px;
-     border: .1px solid rgb(0, 0, 0);
+    padding: 30px 60px;
+    margin: 100px 0 5px 150px;
     text-align: right;
 }
 .btn-submit{
